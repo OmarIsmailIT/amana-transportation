@@ -24,11 +24,7 @@ interface Bus {
 async function getBusData(): Promise<Bus[]> {
   try {
     const res = await fetch("https://www.amanabootcamp.org/api/fs-classwork-data/amana-transportation", {
-      cache: "no-store",
-      headers: {
-        "User-Agent": "Mozilla/5.0",
-        Accept: "application/json",
-      },
+      next: { revalidate: 60 }, // Revalidate every 60 seconds
     });
 
     if (!res.ok) {
