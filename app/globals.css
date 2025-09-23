@@ -1,26 +1,26 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  --color-amana-green: #2E7D32;
+  --color-amana-accent: #FFC107;
+  --color-amana-dark: #111827;
+  --color-amana-bg: #F9FAFB;
+  --color-amana-surface: #FFFFFF;
+  --color-amana-text: #1F2937;
+  --color-amana-text-muted: #6B7280;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-sans: "Geist Sans", ui-sans-serif, system-ui;
+  --font-mono: "Geist Mono", ui-monospace, monospace;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-amana-bg);
+  color: var(--color-amana-text);
+}
+
+/* Force Leaflet map layers below header */
+.leaflet-pane,
+.leaflet-top,
+.leaflet-bottom {
+  z-index: 1 !important;
 }
