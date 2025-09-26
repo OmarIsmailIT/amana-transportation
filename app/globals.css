@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+/* Enable dark mode only when .dark is on <html> */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Light theme (default) */
 @theme {
   --color-amana-green: #2E7D32;
   --color-amana-accent: #FFC107;
@@ -8,10 +12,18 @@
   --color-amana-surface: #FFFFFF;
   --color-amana-text: #1F2937;
   --color-amana-text-muted: #6B7280;
-
-  --font-sans: "Geist Sans", ui-sans-serif, system-ui;
-  --font-mono: "Geist Mono", ui-monospace, monospace;
 }
+
+/* Dark theme overrides */
+@layer theme {
+  .dark {
+    --color-amana-bg: #0f172a;
+    --color-amana-surface: #1e293b;
+    --color-amana-text: #f1f5f9;
+    --color-amana-text-muted: #94a3b8;
+  }
+}
+
 
 body {
   background-color: var(--color-amana-bg);

@@ -4,6 +4,8 @@ import Hero from "@/components/Hero";
 import MapSectionWrapper from "@/components/MapSectionWrapper"; // ✅ wrapper
 import BusSchedule from "@/components/BusSchedule";
 import Footer from "@/components/Footer";
+import StopSchedule from "@/components/StopSchedule";
+import ScheduleTabs from "@/components/ScheduleTaps";
 
 
 
@@ -59,7 +61,7 @@ export default async function Home() {
       <Header />
       <Hero />
       <MapSectionWrapper buses={busData} />
-      <BusSchedule buses={busData} />
+      <ScheduleTabs buses={busData} />
       <Footer />
     </main>
   );
