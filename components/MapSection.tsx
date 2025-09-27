@@ -67,7 +67,7 @@ const MapSection = ({ buses }: MapSectionProps) => {
 
   return (
     <section className="container mx-auto px-6 py-12">
-      <h3 className="text-3xl font-bold text-center mb-8 text-amana-dark">Active Bus Map</h3>
+      <h3 className="text-3xl font-bold text-center mb-8 color-amana-text">Active Bus Map</h3>
       <div className="flex justify-center flex-wrap gap-3 mb-6">
         {buses.map((bus) => (
           <button

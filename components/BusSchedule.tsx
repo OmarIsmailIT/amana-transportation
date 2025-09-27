@@ -76,7 +76,7 @@ const formatTime = (time: string) => {
   return (
     <section className="bg-amana-bg py-12">
       <div className="container mx-auto px-6">
-        <h3 className="text-3xl font-bold text-center mb-8 text-amana-dark">Bus Schedule</h3>
+        <h3 className="text-3xl font-bold text-center mb-8 color-amana-text">Bus Schedule</h3>
         <div className="flex justify-center flex-wrap gap-3 mb-6">
           {buses.map((bus) => (
             <button
